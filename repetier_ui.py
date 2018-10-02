@@ -49,5 +49,6 @@ class repetier_printer(object):
 		
 #EXAMPLE
 if __name__=='__main__':
+	import sys
 	HD = repetier_printer (repetier_api(api_key='142a8eed-7d86-4bea-96bc-cfcf5b3ca742'),'HD')
-	HD.send_gcode("M300 P200")
+	HD.send_gcode_file(sys.argv[1])
