@@ -5,7 +5,7 @@ Une interface pour repetier serveur
 
 *Repetier serveur est installé sur un raspberry pi.*
 
-##Communication entrante:
+## Communication entrante:
 Des gpio du raspberry pi (boutons) envoient du gcode aux imprimantes
 - Extract filament
 - Extrude 100mm à grande vitesse
@@ -13,7 +13,8 @@ Des gpio du raspberry pi (boutons) envoient du gcode aux imprimantes
 - STOP EMERGENCY
 - HOME
 - go to Z max
-##Communication sortante:
+
+## Communication sortante:
 Du gcode au niveau du serveur execute des scripts python
 - FAN ON
 - FAN OFF
