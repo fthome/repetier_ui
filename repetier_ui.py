@@ -2,6 +2,9 @@
 
 from websocket import create_connection
 import json
+import RPi.GPIO as GPIO
+import logging
+
 
 
 class repetier_api(object):
@@ -9,7 +12,7 @@ class repetier_api(object):
 	'''
 	def __init__(self, host = 'localhost', port = '3344', api_key = None):
 		'''Initialisation :
-				- host		hostbname or IP (default : localhost)
+				- host		hostname or IP (default : localhost)
 				- port		port (default : 3344
 		'''
 		self.url = "ws://%s:%s/socket/"%(host, port)
@@ -23,6 +26,7 @@ class repetier_api(object):
 		ws = create_connection(self.url, header=self.header)
 		ws.send(json.dumps(action))
 		ws.close
+		logging.debug("GCODE : %s"%(json.dumps(action)))
 		
 class repetier_printer(object):
 	'''Imprimante 3D reliée à REPETIER SERVEUR
@@ -46,6 +50,69 @@ class repetier_printer(object):
 		file = open(filename,"r")
 		gcode = file.read()
 		self.send_gcode(gcode)
+		
+class repetier_ui(object):
+	''' Un raspberry pi avec des boutons qui lancent des actions sur le serveur repetier
+	'''
+	def __init__(self):
+		'''Initialisation
+		'''
+		self.actions = {}
+		GPIO.setmode(GPIO.BCM)
+		logging.info("Repetier UI started.")
+	
+	def add_action(self, pin, action):
+		'''Add an action when the gpio pin is down
+		'''
+		self.actions[pin]=action
+		GPIO.setup(pin,GPIO.IN)
+		GPIO.add_event_detect(pin, GPIO.FALLING, callback=self.actions[pin].execute, bouncetime=500)
+	
+	def close(self):
+		'''Close interface
+		'''
+		logging.info("Repetier UI closed.")
+		GPIO.cleanup()  
+
+class repetier_action(object):
+	'''Une action à réaliser sur une imprimante
+	'''
+	def __init__(self, printer):
+		self.printer = printer
+		
+class repetier_gcode_action(repetier_action):
+	'''Une action à base string (=gcode)
+	'''
+	def __init__(self, gcode, printer):
+		'''Initialisation
+			gcode	:		string of gcode ex : "M300 S1000"
+			printer	:		a repetier_printer object
+		'''
+		self.gcode = gcode
+		repetier_action.__init__(self, printer)
+	def execute(self, channel):
+		'''Execute the gcode on the printer
+		'''
+		logging.info("GPIO%s FALLING => GCODE : %s send to %s."%(channel, self.gcode, self.printer.name))
+		self.printer.send_gcode(self.gcode)
+		
+class repetier_file_action(repetier_action):
+	'''Une action à base de fichier contenant du gcode
+	'''
+	def __init__(self, filename, printer):
+		'''Initialisation
+			file_name	:		name of the file with gcode
+			printer		:		a repetier_printer object
+		'''
+		self.filename = filename
+		repetier_action.__init__(self, printer)
+	def execute(self, channel):
+		'''Execute the gcode on the printer
+		'''
+		logging.info("GPIO%s FALLING => GCODE : %s send to %s."%(channel, self.filename, self.printer.name))
+		self.printer.send_gcode_file(self.filename)		
+		
+		
 		
 #EXAMPLE
 if __name__=='__main__':

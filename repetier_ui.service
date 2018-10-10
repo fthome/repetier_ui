@@ -1,0 +1,10 @@
+[Unit]
+Description=Interface Pour repetier serveur : des boutons qui lancent du GCODE
+After=RepetierServer.service
+ 
+[Service]
+Type=simple
+ExecStart=/home/pi/repetier_ui/repetier_ui.sh
+
+[Install]
+WantedBy=multi-user.target

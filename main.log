@@ -1,0 +1,28 @@
+2018-10-10 10:35:58,804 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-10 10:36:04,371 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-10 10:36:15,350 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-10 10:36:16,561 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-10 10:36:39,539 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-10 10:38:18,154 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-10 10:38:18,161 - INFO - Repetier UI started.
+2018-10-10 10:40:18,022 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-10 10:42:51,001 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-10 10:42:51,033 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-10 10:47:10,945 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-10 10:47:11,060 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-10 10:55:14,437 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-10 10:57:18,750 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-10 10:57:18,935 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-10 10:59:24,953 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-10 19:15:49,910 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-10 19:15:49,911 - INFO - Repetier UI started.
+2018-10-10 19:16:17,470 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-10 19:16:19,734 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-10 19:16:19,787 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-10 19:16:21,590 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-10 19:16:21,677 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-10 19:16:23,437 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-10 19:16:24,711 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-10 19:16:24,792 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-10 19:16:25,932 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-10 19:16:25,939 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
