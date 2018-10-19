@@ -4,8 +4,11 @@ from websocket import create_connection
 import json
 import RPi.GPIO as GPIO
 import logging
+import time
 
-
+# NOTES : il y aurait surement à simplifier la gestion du débounce!
+#TODO : gestion des appuis longs
+#TODO : faire des boutons de type on-off (ex : pause / continue)
 
 class repetier_api(object):
 	'''Un serveur Repetier pour impression 3D
@@ -47,71 +50,106 @@ class repetier_printer(object):
 	def send_gcode_file(self, filename):
 		'''Send a gcode file to the printer
 		'''
-		file = open(filename,"r")
-		gcode = file.read()
-		self.send_gcode(gcode)
+		try:
+			file = open(filename,"r")
+			gcode = file.read()
+			self.send_gcode(gcode)
+		except:
+			logging.error("File not found : %s"%(filename))
+			pass
 		
 class repetier_ui(object):
 	''' Un raspberry pi avec des boutons qui lancent des actions sur le serveur repetier
 	'''
-	def __init__(self):
+	def __init__(self, bounce_time = 1000, debug=False):
 		'''Initialisation
 		'''
 		self.actions = {}
+		self.debug = debug
+		self.bounce_time = bounce_time
+		self.last_action_time = time.time()
 		GPIO.setmode(GPIO.BCM)
 		logging.info("Repetier UI started.")
+		if debug:
+			logging.info("Debug mode is on : gcode are not send.")
 	
 	def add_action(self, pin, action):
 		'''Add an action when the gpio pin is down
 		'''
 		self.actions[pin]=action
+		action.repetier_ui = self
+		if self.debug:
+			action.set_debug_mode(True)
 		GPIO.setup(pin,GPIO.IN)
-		GPIO.add_event_detect(pin, GPIO.FALLING, callback=self.actions[pin].execute, bouncetime=500)
+		GPIO.add_event_detect(pin, GPIO.FALLING, callback=self.actions[pin].execute, bouncetime= self.bounce_time)
 	
 	def close(self):
 		'''Close interface
 		'''
 		logging.info("Repetier UI closed.")
 		GPIO.cleanup()  
+		
+	def not_bounce(self, channel):
+		''' Return False if another action is runnig before bource_time
+			or channel GPIO is not LOW
+		'''
+		if GPIO.input(channel)==0:
+			now = time.time()
+			if now - self.last_action_time > self.bounce_time/1000.0:
+				self.last_action_time = now
+				return True
 
 class repetier_action(object):
 	'''Une action à réaliser sur une imprimante
 	'''
-	def __init__(self, printer):
+	def __init__(self, printer, debug = False):
 		self.printer = printer
+		self.debug = debug
+		
+	def set_debug_mode(self, debug):
+		''' Set debug mode on/off (debug = no gcoden sent)
+		'''
+		self.debug = debug
+
+		
 		
 class repetier_gcode_action(repetier_action):
 	'''Une action à base string (=gcode)
 	'''
-	def __init__(self, gcode, printer):
+	def __init__(self, gcode, printer, debug = False):
 		'''Initialisation
 			gcode	:		string of gcode ex : "M300 S1000"
 			printer	:		a repetier_printer object
 		'''
 		self.gcode = gcode
-		repetier_action.__init__(self, printer)
+		repetier_action.__init__(self, printer, debug)
+		
 	def execute(self, channel):
 		'''Execute the gcode on the printer
 		'''
-		logging.info("GPIO%s FALLING => GCODE : %s send to %s."%(channel, self.gcode, self.printer.name))
-		self.printer.send_gcode(self.gcode)
+		if self.repetier_ui.not_bounce(channel):
+			logging.info("GPIO%s FALLING => GCODE : %s send to %s."%(channel, self.gcode, self.printer.name))
+			if not self.debug:
+				self.printer.send_gcode(self.gcode)
 		
 class repetier_file_action(repetier_action):
 	'''Une action à base de fichier contenant du gcode
 	'''
-	def __init__(self, filename, printer):
+	def __init__(self, filename, printer, debug = False):
 		'''Initialisation
 			file_name	:		name of the file with gcode
 			printer		:		a repetier_printer object
 		'''
 		self.filename = filename
-		repetier_action.__init__(self, printer)
+		repetier_action.__init__(self, printer, debug)
+		
 	def execute(self, channel):
 		'''Execute the gcode on the printer
 		'''
-		logging.info("GPIO%s FALLING => GCODE : %s send to %s."%(channel, self.filename, self.printer.name))
-		self.printer.send_gcode_file(self.filename)		
-		
+		if self.repetier_ui.not_bounce(channel):
+			logging.info("GPIO%s FALLING => GCODE : %s send to %s."%(channel, self.filename, self.printer.name))
+			if not self.debug:
+				self.printer.send_gcode_file(self.filename)				
 		
 		
 #EXAMPLE

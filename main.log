@@ -26,3 +26,509 @@
 2018-10-10 19:16:24,792 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
 2018-10-10 19:16:25,932 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
 2018-10-10 19:16:25,939 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 07:49:44,941 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 07:49:45,463 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 07:50:20,020 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 07:50:20,026 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 07:50:20,031 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 08:47:23,275 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-12 08:47:23,275 - INFO - Repetier UI started.
+2018-10-12 08:52:41,177 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 08:52:44,089 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 08:52:46,938 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 08:52:50,021 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 08:54:46,910 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-12 08:54:46,912 - INFO - Repetier UI started.
+2018-10-12 08:54:46,912 - INFO - Debug mode is on : gcode are not send.
+2018-10-12 08:55:18,485 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 08:55:21,430 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 08:55:24,214 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 08:55:27,639 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 08:55:28,492 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 08:55:31,325 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 08:55:34,891 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 08:55:35,442 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 12:01:47,075 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 12:01:48,009 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 12:01:48,166 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 12:01:49,057 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 12:01:49,897 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 12:01:51,001 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 12:01:51,859 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 12:03:01,609 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-12 12:03:01,611 - INFO - Repetier UI started.
+2018-10-12 12:03:01,611 - INFO - Debug mode is on : gcode are not send.
+2018-10-12 12:03:17,663 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 12:03:18,589 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 12:03:19,425 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 12:03:20,206 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 12:03:21,103 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 12:03:21,839 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 12:27:31,170 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 12:27:31,862 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 12:27:31,881 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 12:27:33,105 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 12:27:33,672 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 12:27:35,420 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 12:27:36,155 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 12:45:02,772 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-12 12:45:02,775 - INFO - Repetier UI started.
+2018-10-12 12:45:02,778 - INFO - Debug mode is on : gcode are not send.
+2018-10-12 12:45:51,780 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:45:51,781 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:45:53,737 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:45:53,738 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:45:53,845 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:45:53,846 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:45:55,644 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:45:55,645 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:45:57,467 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:45:57,468 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:45:59,238 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:45:59,239 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:46:01,582 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:46:01,584 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:46:07,031 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:46:07,032 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:46:09,485 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:46:09,486 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:46:11,390 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:46:11,391 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:46:14,004 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:46:14,005 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:46:15,729 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:46:15,730 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:46:17,366 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:46:17,367 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:46:22,594 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:46:22,595 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:46:22,846 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:46:22,852 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:46:23,070 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:46:23,071 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:46:23,302 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:46:23,303 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:46:23,593 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:46:23,594 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:46:23,828 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 138, in execute
+    if self.not_bounce():
+
+2018-10-12 12:46:23,829 - ERROR - <type 'exceptions.TypeError'> - not_bounce() takes no arguments (1 given)
+2018-10-12 12:47:24,309 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-12 12:47:24,310 - INFO - Repetier UI started.
+2018-10-12 12:47:24,310 - INFO - Debug mode is on : gcode are not send.
+2018-10-12 12:54:13,467 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-12 12:54:13,467 - INFO - Repetier UI started.
+2018-10-12 12:54:13,468 - INFO - Debug mode is on : gcode are not send.
+2018-10-12 12:54:29,500 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 148, in execute
+    if self.repetier_ui.not_bounce():
+  File "/home/pi/repetier_ui/repetier_ui.py", line 94, in not_bounce
+    logging.debug("Now : %s vs last_action_time : %s"%(nowself.last_action_time))
+
+2018-10-12 12:54:29,502 - ERROR - <type 'exceptions.NameError'> - global name 'nowself' is not defined
+2018-10-12 12:54:30,263 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 148, in execute
+    if self.repetier_ui.not_bounce():
+  File "/home/pi/repetier_ui/repetier_ui.py", line 94, in not_bounce
+    logging.debug("Now : %s vs last_action_time : %s"%(nowself.last_action_time))
+
+2018-10-12 12:54:30,264 - ERROR - <type 'exceptions.NameError'> - global name 'nowself' is not defined
+2018-10-12 12:54:30,875 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 148, in execute
+    if self.repetier_ui.not_bounce():
+  File "/home/pi/repetier_ui/repetier_ui.py", line 94, in not_bounce
+    logging.debug("Now : %s vs last_action_time : %s"%(nowself.last_action_time))
+
+2018-10-12 12:54:30,876 - ERROR - <type 'exceptions.NameError'> - global name 'nowself' is not defined
+2018-10-12 12:54:31,453 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 148, in execute
+    if self.repetier_ui.not_bounce():
+  File "/home/pi/repetier_ui/repetier_ui.py", line 94, in not_bounce
+    logging.debug("Now : %s vs last_action_time : %s"%(nowself.last_action_time))
+
+2018-10-12 12:54:31,454 - ERROR - <type 'exceptions.NameError'> - global name 'nowself' is not defined
+2018-10-12 12:54:32,300 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 148, in execute
+    if self.repetier_ui.not_bounce():
+  File "/home/pi/repetier_ui/repetier_ui.py", line 94, in not_bounce
+    logging.debug("Now : %s vs last_action_time : %s"%(nowself.last_action_time))
+
+2018-10-12 12:54:32,301 - ERROR - <type 'exceptions.NameError'> - global name 'nowself' is not defined
+2018-10-12 12:54:32,794 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 148, in execute
+    if self.repetier_ui.not_bounce():
+  File "/home/pi/repetier_ui/repetier_ui.py", line 94, in not_bounce
+    logging.debug("Now : %s vs last_action_time : %s"%(nowself.last_action_time))
+
+2018-10-12 12:54:32,795 - ERROR - <type 'exceptions.NameError'> - global name 'nowself' is not defined
+2018-10-12 12:54:36,530 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 148, in execute
+    if self.repetier_ui.not_bounce():
+  File "/home/pi/repetier_ui/repetier_ui.py", line 94, in not_bounce
+    logging.debug("Now : %s vs last_action_time : %s"%(nowself.last_action_time))
+
+2018-10-12 12:54:36,531 - ERROR - <type 'exceptions.NameError'> - global name 'nowself' is not defined
+2018-10-12 12:55:28,157 - INFO - Repetier UI closed.
+2018-10-12 12:55:29,105 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-12 12:55:29,106 - INFO - Repetier UI started.
+2018-10-12 12:55:29,107 - INFO - Debug mode is on : gcode are not send.
+2018-10-12 12:55:40,727 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 148, in execute
+    if self.repetier_ui.not_bounce():
+  File "/home/pi/repetier_ui/repetier_ui.py", line 95, in not_bounce
+    if now - self.last_action_time > self.bounce_time:
+
+2018-10-12 12:55:40,728 - ERROR - <type 'exceptions.TypeError'> - unsupported operand type(s) for -: 'builtin_function_or_method' and 'float'
+2018-10-12 12:55:41,137 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 148, in execute
+    if self.repetier_ui.not_bounce():
+  File "/home/pi/repetier_ui/repetier_ui.py", line 95, in not_bounce
+    if now - self.last_action_time > self.bounce_time:
+
+2018-10-12 12:55:41,138 - ERROR - <type 'exceptions.TypeError'> - unsupported operand type(s) for -: 'builtin_function_or_method' and 'float'
+2018-10-12 12:55:41,499 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 148, in execute
+    if self.repetier_ui.not_bounce():
+  File "/home/pi/repetier_ui/repetier_ui.py", line 95, in not_bounce
+    if now - self.last_action_time > self.bounce_time:
+
+2018-10-12 12:55:41,500 - ERROR - <type 'exceptions.TypeError'> - unsupported operand type(s) for -: 'builtin_function_or_method' and 'float'
+2018-10-12 12:55:41,785 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 148, in execute
+    if self.repetier_ui.not_bounce():
+  File "/home/pi/repetier_ui/repetier_ui.py", line 95, in not_bounce
+    if now - self.last_action_time > self.bounce_time:
+
+2018-10-12 12:55:41,787 - ERROR - <type 'exceptions.TypeError'> - unsupported operand type(s) for -: 'builtin_function_or_method' and 'float'
+2018-10-12 12:56:24,822 - INFO - Repetier UI closed.
+2018-10-12 12:56:25,640 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-12 12:56:25,641 - INFO - Repetier UI started.
+2018-10-12 12:56:25,643 - INFO - Debug mode is on : gcode are not send.
+2018-10-12 12:57:41,223 - INFO - Repetier UI closed.
+2018-10-12 12:58:35,420 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-12 12:58:35,421 - INFO - Repetier UI started.
+2018-10-12 12:58:35,422 - INFO - Debug mode is on : gcode are not send.
+2018-10-12 12:58:45,989 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 12:58:47,904 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 12:58:49,444 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 12:58:50,819 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 12:58:52,330 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 12:58:53,899 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 12:58:57,743 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 12:58:59,397 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 12:59:01,170 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 12:59:03,038 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:03:45,889 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-12 13:03:45,890 - INFO - Repetier UI started.
+2018-10-12 13:03:45,891 - INFO - Debug mode is on : gcode are not send.
+2018-10-12 13:04:01,964 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:04:01,964 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:04:07,682 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:04:07,682 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:04:10,593 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:04:10,593 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:04:14,593 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:04:14,593 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:04:15,628 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:04:15,628 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:04:17,513 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:04:17,513 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:04:19,033 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:04:19,033 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:04:20,397 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:04:20,397 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:04:22,582 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:04:22,582 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:04:24,602 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:04:24,603 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:04:26,228 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:04:26,228 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:04:27,937 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:27,937 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:30,317 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:30,317 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:31,633 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:31,633 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:36,989 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:36,989 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:45,342 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:45,342 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:48,697 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:48,697 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:49,724 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:49,724 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:52,713 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:52,713 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:55,504 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:55,504 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:57,612 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:04:57,612 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:02,350 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:02,350 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:03,660 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:03,660 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:04,871 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:05:04,871 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:05:06,483 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:05:06,483 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:05:08,108 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:08,108 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:09,235 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:09,236 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:10,744 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:10,744 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:16,960 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:16,961 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:18,043 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:05:18,043 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:05:20,446 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:20,446 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:23,643 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:23,643 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:26,439 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:26,439 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:27,895 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:27,895 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:29,123 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:29,123 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:31,193 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:31,193 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:32,238 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:32,238 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:33,279 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:33,279 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:34,800 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:34,800 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:36,039 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:36,039 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:40,580 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:40,580 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:43,402 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:43,402 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:44,468 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:44,469 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:56,724 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:05:56,724 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:06:01,584 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:06:01,584 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:06:05,892 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:06:05,892 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:06:14,448 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:06:14,448 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:06:22,248 - INFO - Repetier UI closed.
+2018-10-12 13:12:52,547 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-12 13:12:52,548 - INFO - Repetier UI started.
+2018-10-12 13:12:52,549 - INFO - Debug mode is on : gcode are not send.
+2018-10-12 13:12:55,476 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:12:58,062 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:12:59,397 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:13:01,513 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:13:14,496 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:13:16,322 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:13:18,998 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:13:20,072 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:13:21,217 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:13:22,577 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:13:23,915 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:13:25,387 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:13:26,953 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:14:11,986 - INFO - Repetier UI closed.
+2018-10-12 13:14:22,311 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-12 13:14:22,313 - INFO - Repetier UI started.
+2018-10-12 13:14:22,314 - INFO - Debug mode is on : gcode are not send.
+2018-10-12 13:14:24,350 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:14:25,550 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:14:27,900 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:14:29,694 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:14:32,005 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:14:34,271 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:14:36,022 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:14:37,416 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:14:38,584 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:14:40,466 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:14:42,152 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:14:43,864 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:14:45,128 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:14:48,528 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:14:50,248 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:14:53,725 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:14:55,366 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:14:57,699 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:14:59,696 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:15:01,486 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:15:02,691 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:15:04,366 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:15:06,320 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:15:08,108 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:15:10,289 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:12,001 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:13,029 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:14,122 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:15,170 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:16,491 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:19,714 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:20,859 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:22,322 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:23,483 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:25,445 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:26,866 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:28,030 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:15:35,239 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:36,695 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:37,852 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:39,414 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:40,456 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:41,619 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:42,821 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:43,940 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:45,358 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:46,918 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:48,396 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:49,421 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:50,856 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:52,606 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:53,748 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:56,305 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:57,627 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:58,678 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:15:59,794 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:16:00,909 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:16:02,051 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:16:03,224 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:16:04,516 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:16:05,580 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:16:08,033 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:16:09,695 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:16:10,770 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:16:26,482 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:16:27,703 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:16:28,834 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:16:30,795 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:17:00,937 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:17:02,834 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:17:04,948 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:17:08,154 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:17:09,344 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:17:11,012 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:17:12,498 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:17:14,225 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:17:16,054 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:17:20,938 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:17:22,496 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:17:23,530 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:17:26,998 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:18:12,422 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:31:38,180 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:32:09,337 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:32:10,513 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:32:13,548 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:32:16,082 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:17,438 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:18,846 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:20,290 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:21,523 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:22,911 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:25,356 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:26,523 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:31,861 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:33,714 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:37,450 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:38,797 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:39,951 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:41,265 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:42,578 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:45,131 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:32:46,891 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:32:48,038 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:32:49,119 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:33:30,878 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:33:44,188 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:33:46,421 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:33:48,320 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:33:50,258 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:33:52,827 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:33:54,537 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:33:56,848 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:33:58,750 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:34:00,659 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:34:03,532 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:34:05,158 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:34:25,202 - INFO - Repetier UI closed.
+2018-10-12 13:36:54,751 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-12 13:36:54,753 - INFO - Repetier UI started.
+2018-10-12 13:37:11,058 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:37:12,543 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:37:14,155 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:37:15,167 - INFO - GPIO19 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:37:17,426 - INFO - GPIO26 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:37:19,109 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:37:20,222 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-12 13:37:28,602 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:40:12,314 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:40:38,019 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:40:58,828 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:42:25,595 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:48:42,595 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:49:13,857 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:49:32,668 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-12 13:49:49,939 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-12 13:50:01,036 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-12 13:50:12,897 - INFO - GPIO10 FALLING => GCODE : bip.gcode send to HD.
+2018-10-15 13:08:32,496 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-15 13:08:52,567 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-15 13:09:05,431 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-15 14:56:13,113 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-15 14:56:28,341 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-16 17:31:00,610 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-16 17:33:54,152 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-16 17:34:04,192 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-16 18:45:06,718 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-16 18:45:06,720 - INFO - Repetier UI started.
+2018-10-17 10:59:23,015 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-17 11:03:34,360 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-17 11:03:41,914 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-17 18:52:35,433 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-17 18:52:35,436 - INFO - Repetier UI started.
+2018-10-18 13:48:23,987 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-18 13:52:37,904 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-18 13:53:04,593 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-19 07:56:19,363 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-19 07:56:22,869 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-19 13:07:29,544 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-19 13:08:09,386 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-19 13:08:45,830 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-19 13:17:17,887 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-19 13:17:17,889 - INFO - Repetier UI started.
+2018-10-19 13:17:58,217 - INFO - GPIO10 FALLING => GCODE : goto_z_max.gcode send to HD.
+2018-10-19 13:19:02,096 - INFO - GPIO19 FALLING => GCODE : stop_all.gcode send to HD.
+2018-10-19 13:21:15,810 - INFO - GPIO19 FALLING => GCODE : stop_all.gcode send to HD.
+2018-10-19 13:26:19,376 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-19 13:30:54,354 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-19 13:30:55,876 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-19 13:46:05,360 - INFO - GPIO26 FALLING => GCODE : pause.gcode send to HD.

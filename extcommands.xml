@@ -1,0 +1,64 @@
+<config>
+	<!--
+       If you want to run external commands, enter them in this configuration with
+       full path. You will see them in the main menu. Copy this file into the
+       <storage>/database directory.
+
+       Security consideration: The reason there is no online editor for this is simply
+       security. The commands you enter here are executed with the privileges of the
+       daemon running the server. If you would allow online configuration, a hacker could
+       simply add any command he needs to hack your system.
+    -->
+	<command>
+		<name>Shutdown Server</name>
+		<execute>sudo /sbin/shutdown -h now</execute>
+		<confirm>Really shut down the server?</confirm>
+		<!-- Define if command should show up in local printer interface, default true.-->
+		<local>true</local>
+		<!-- Define if command should show up in remote printer interface, default true.-->
+		<remote>true</remote>
+		<!-- Define if command should show up only for users with print permission, default true.-->
+		<print-permission>true</print-permission>
+		<!-- Define if command should show up only for users with add files permission, default false.-->
+		<add-permission>true</add-permission>
+		<!-- Define if command should show up only for users with del files permission, default false.-->
+		<del-permission>true</del-permission>
+		<!-- Define if command should show up only for users with configuration permission, default false.-->
+		<config-permission>true</config-permission>
+	</command>
+	<command>
+		<name>Reboot Server</name>
+		<execute>sudo /sbin/shutdown -r now</execute>
+		<confirm>Really reboot the server?</confirm>
+                <!-- Define if command should show up in local printer interface, default true.-->
+                <local>true</local>
+                <!-- Define if command should show up in remote printer interface, default true.-->
+                <remote>true</remote>
+                <!-- Define if command should show up only for users with print permission, default true.-->
+                <print-permission>true</print-permission>
+                <!-- Define if command should show up only for users with add files permission, default false.-->
+                <add-permission>true</add-permission>
+                <!-- Define if command should show up only for users with del files permission, default false.-->
+                <del-permission>true</del-permission>
+                <!-- Define if command should show up only for users with configuration permission, default false.-->
+                <config-permission>true</config-permission>
+	</command>
+	<command>
+		<name>Fan_off</name>
+		<execute>/usr/bin/python /home/pi/repetier_ui/set_ifttt.py fan_off</execute>
+	</command>
+        <command>
+                <name>Fan_on</name>
+                <execute>/usr/bin/python /home/pi/repetier_ui/set_ifttt.py fan_on</execute>
+        </command>
+        <command>
+                <name>HD_off</name>
+                <execute>/usr/bin/python /home/pi/repetier_ui/set_ifttt.py HD_off</execute>
+        </command>
+        <command>
+                <name>HD_on</name>
+                <execute>/usr/bin/python /home/pi/repetier_ui/set_ifttt.py HD_on</execute>
+        </command>
+	<execute name="IFTTT" allowParams = "true">/usr/bin/python /home/pi/repetier_ui/set_ifttt.py</execute>
+</config>
+
