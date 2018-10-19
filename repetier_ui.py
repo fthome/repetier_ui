@@ -25,11 +25,24 @@ class repetier_api(object):
 	def send_gcode(self, printer, gcode):
 		'''Send a gcode to a printer
 		'''
-		action = {'action': 'send', 'data': {'cmd': gcode},'printer':printer}
-		ws = create_connection(self.url, header=self.header)
-		ws.send(json.dumps(action))
-		ws.close
+		datas = {'action': 'send', 'data': {'cmd': gcode},'printer':printer}
+		self.send(datas)
 		logging.debug("GCODE : %s"%(json.dumps(action)))
+	
+	def send_action(self, printer, action):
+		'''Send a action to the printer (ex : action="continueJob")
+		'''
+		datas = {'action': action, 'data': {},'printer':printer}
+		self.send(datas)
+		logging.debug("ACTION : %s"%(json.dumps(datas)))
+	
+	def send(self, datas):
+		'''Send websockets
+		'''
+		ws = create_connection(self.url, header=self.header)
+		ws.send(json.dumps(datas))
+		ws.close
+		
 		
 class repetier_printer(object):
 	'''Imprimante 3D reliée à REPETIER SERVEUR
@@ -57,6 +70,10 @@ class repetier_printer(object):
 		except:
 			logging.error("File not found : %s"%(filename))
 			pass
+	def send_action(self, action):
+		'''Send a action to the printer (ex : action="continueJob")
+		'''
+		self.repetier_api.send_action(self.name,action)
 		
 class repetier_ui(object):
 	''' Un raspberry pi avec des boutons qui lancent des actions sur le serveur repetier
@@ -65,6 +82,7 @@ class repetier_ui(object):
 		'''Initialisation
 		'''
 		self.actions = {}
+		self.current_action = {}
 		self.debug = debug
 		self.bounce_time = bounce_time
 		self.last_action_time = time.time()
@@ -82,6 +100,29 @@ class repetier_ui(object):
 			action.set_debug_mode(True)
 		GPIO.setup(pin,GPIO.IN)
 		GPIO.add_event_detect(pin, GPIO.FALLING, callback=self.actions[pin].execute, bouncetime= self.bounce_time)
+	
+	def add_successive_actions(self, pin, *actions):
+		'''Add  actions who are successively done:
+			1st push : action 1
+			2nd push : action 2
+			...
+			n push : action 1
+		'''
+		self.actions[pin] = actions
+		self.current_action[pin] = 0
+		for action in actions:
+			action.repetier_ui = self
+			if self.debug:
+				action.set_debug_mode(True)
+		GPIO.setup(pin,GPIO.IN)
+		GPIO.add_event_detect(pin, GPIO.FALLING, callback=self.successive_action(pin), bouncetime= self.bounce_time)
+		
+	def successive_action(self, pin):
+		'''Return a callback function for add_event_detect
+		'''
+		callback = self.actions[pin][self.current_action[pin]].execute
+		self.current_action[pin] = (self.current_action[pin] + 1) % len(self.actions[pin])
+		return callback
 	
 	def close(self):
 		'''Close interface
@@ -150,6 +191,25 @@ class repetier_file_action(repetier_action):
 			logging.info("GPIO%s FALLING => GCODE : %s send to %s."%(channel, self.filename, self.printer.name))
 			if not self.debug:
 				self.printer.send_gcode_file(self.filename)				
+		
+class repetier_action_action(repetier_action):
+	'''Une action simple (ex : "continueJob")
+	'''
+	def __init__(self, action, printer, debug=False):
+		'''Initialisation
+			action		:		action (string)
+			printer		:		a repetier_printer object
+		'''
+		self.action = action
+		repetier_action.__init__(self, printer, debug)
+	
+	def execute(self, channel):
+		'''Execute the action on the printer
+		'''
+		if self.repetier_ui.not_bounce(channel):
+			logging.info("GPIO%s FALLING => ACTION : %s send to %s."%(channel, self.action, self.printer.name))
+			if not self.debug:
+				self.printer.send_action(self.action)				
 		
 		
 #EXAMPLE

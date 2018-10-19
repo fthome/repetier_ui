@@ -15,7 +15,7 @@ UI.add_action(27,repetier_file_action("extrude_100_vite.gcode",HD))
 UI.add_action(17,repetier_file_action("extrude_50.gcode",HD))
 UI.add_action(10,repetier_file_action("goto_z_max.gcode",HD))
 UI.add_action(19,repetier_file_action("stop_all.gcode",HD))
-UI.add_action(26,repetier_file_action("pause.gcode",HD))
+UI.add_successive_actions(26,repetier_file_action("pause.gcode",HD), repetier_action_action("continueJob",HD))
 
 try:
     while True:

@@ -532,3 +532,38 @@
 2018-10-19 13:30:54,354 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
 2018-10-19 13:30:55,876 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
 2018-10-19 13:46:05,360 - INFO - GPIO26 FALLING => GCODE : pause.gcode send to HD.
+2018-10-19 15:00:19,337 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-19 15:00:19,338 - INFO - Repetier UI started.
+2018-10-19 15:00:19,340 - ERROR -   File "main.py", line 18, in <module>
+    UI.successive_action(26,repetier_file_action("pause.gcode",HD), repetier_action_action("continueJob",HD))
+
+2018-10-19 15:00:19,341 - ERROR - <type 'exceptions.TypeError'> - successive_action() takes exactly 2 arguments (4 given)
+2018-10-19 15:01:04,918 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-19 15:01:04,919 - INFO - Repetier UI started.
+2018-10-19 15:01:05,077 - ERROR -   File "main.py", line 18, in <module>
+    UI.add_successive_action(26,repetier_file_action("pause.gcode",HD), repetier_action_action("continueJob",HD))
+
+2018-10-19 15:01:05,078 - ERROR - <type 'exceptions.AttributeError'> - 'repetier_ui' object has no attribute 'add_successive_action'
+2018-10-19 15:01:24,657 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-19 15:01:24,658 - INFO - Repetier UI started.
+2018-10-19 15:01:24,814 - ERROR -   File "main.py", line 18, in <module>
+    UI.add_successive_actions(26,repetier_file_action("pause.gcode",HD), repetier_action_action("continueJob",HD))
+  File "/home/pi/repetier_ui/repetier_ui.py", line 118, in add_successive_actions
+    GPIO.add_event_detect(pin, GPIO.FALLING, callback=self.successive_action(pin), bouncetime= self.bounce_time)
+  File "/home/pi/repetier_ui/repetier_ui.py", line 124, in successive_action
+    self.current_action[pin] = (self.current_action + 1) % len(self.actions[pin])
+
+2018-10-19 15:01:24,815 - ERROR - <type 'exceptions.TypeError'> - unsupported operand type(s) for +: 'dict' and 'int'
+2018-10-19 15:01:59,080 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-19 15:01:59,081 - INFO - Repetier UI started.
+2018-10-19 15:01:59,229 - ERROR -   File "main.py", line 18, in <module>
+    UI.add_successive_actions(26,repetier_file_action("pause.gcode",HD), repetier_action_action("continueJob",HD))
+  File "/home/pi/repetier_ui/repetier_ui.py", line 118, in add_successive_actions
+    GPIO.add_event_detect(pin, GPIO.FALLING, callback=self.successive_action(pin), bouncetime= self.bounce_time)
+
+2018-10-19 15:01:59,230 - ERROR - <type 'exceptions.TypeError'> - Parameter must be callable
+2018-10-19 15:02:59,389 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-19 15:02:59,390 - INFO - Repetier UI started.
+2018-10-19 15:03:23,310 - INFO - Repetier UI closed.
+2018-10-19 15:03:28,552 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-19 15:03:28,553 - INFO - Repetier UI started.
