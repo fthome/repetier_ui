@@ -27,7 +27,7 @@ class repetier_api(object):
 		'''
 		datas = {'action': 'send', 'data': {'cmd': gcode},'printer':printer}
 		self.send(datas)
-		logging.debug("GCODE : %s"%(json.dumps(action)))
+		logging.debug("GCODE : %s"%(json.dumps(datas)))
 	
 	def send_action(self, printer, action):
 		'''Send a action to the printer (ex : action="continueJob")
@@ -39,8 +39,12 @@ class repetier_api(object):
 	def send(self, datas):
 		'''Send websockets
 		'''
-		ws = create_connection(self.url, header=self.header)
-		ws.send(json.dumps(datas))
+		try:
+			ws = create_connection(self.url, header=self.header)
+			ws.send(json.dumps(datas))
+		except Exception as e:
+			logging.error("WebsocketError: %s"%(err.message))
+			
 		ws.close
 		
 		
@@ -67,9 +71,8 @@ class repetier_printer(object):
 			file = open(filename,"r")
 			gcode = file.read()
 			self.send_gcode(gcode)
-		except:
+		except IOError:
 			logging.error("File not found : %s"%(filename))
-			pass
 	def send_action(self, action):
 		'''Send a action to the printer (ex : action="continueJob")
 		'''

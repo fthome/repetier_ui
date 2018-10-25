@@ -567,3 +567,63 @@
 2018-10-19 15:03:23,310 - INFO - Repetier UI closed.
 2018-10-19 15:03:28,552 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
 2018-10-19 15:03:28,553 - INFO - Repetier UI started.
+2018-10-22 10:46:25,126 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-22 10:46:25,141 - ERROR - File not found : extrude_100_vite.gcode
+2018-10-22 10:46:28,039 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-22 10:46:28,053 - ERROR - File not found : extrude_50.gcode
+2018-10-22 17:31:36,235 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-22 17:31:36,241 - INFO - Repetier UI started.
+2018-10-22 20:00:32,784 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-22 20:00:32,810 - ERROR - File not found : extract.gcode
+2018-10-22 20:03:52,128 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-22 20:03:52,144 - ERROR - File not found : extrude_100_vite.gcode
+2018-10-22 20:03:55,853 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-22 20:03:55,870 - ERROR - File not found : extrude_50.gcode
+2018-10-22 20:06:10,744 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-22 20:06:10,746 - INFO - Repetier UI started.
+2018-10-23 07:43:39,326 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-23 07:43:39,346 - ERROR - File not found : extract.gcode
+2018-10-23 07:48:02,939 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-23 07:48:02,954 - ERROR - File not found : extrude_100_vite.gcode
+2018-10-23 07:48:14,274 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-23 07:48:14,289 - ERROR - File not found : extrude_50.gcode
+2018-10-23 10:12:24,398 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-23 10:12:24,411 - ERROR - File not found : extrude_100_vite.gcode
+2018-10-23 10:12:28,086 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-23 10:12:28,099 - ERROR - File not found : extrude_50.gcode
+2018-10-23 18:03:54,664 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-23 18:03:54,678 - ERROR - File not found : extract.gcode
+2018-10-23 18:06:52,709 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-23 18:06:52,722 - ERROR - File not found : extrude_100_vite.gcode
+2018-10-23 18:06:55,479 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-23 18:06:55,492 - ERROR - File not found : extrude_50.gcode
+2018-10-25 08:00:32,475 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-25 08:00:32,681 - ERROR - File not found : extrude_100_vite.gcode
+2018-10-25 08:00:34,865 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-25 08:00:34,881 - ERROR - File not found : extrude_50.gcode
+2018-10-25 10:31:43,469 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-25 10:31:43,470 - INFO - Repetier UI started.
+2018-10-25 10:31:55,437 - INFO - Repetier UI closed.
+2018-10-25 10:32:07,624 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-25 10:32:07,625 - INFO - Repetier UI started.
+2018-10-25 10:48:23,339 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-25 10:48:23,349 - INFO - Repetier UI started.
+2018-10-25 10:53:26,215 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-25 10:53:26,244 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 196, in execute
+    self.printer.send_gcode_file(self.filename)
+  File "/home/pi/repetier_ui/repetier_ui.py", line 73, in send_gcode_file
+    self.send_gcode(gcode)
+  File "/home/pi/repetier_ui/repetier_ui.py", line 65, in send_gcode
+    self.repetier_api.send_gcode(self.name,gcode)
+  File "/home/pi/repetier_ui/repetier_ui.py", line 30, in send_gcode
+    logging.debug("GCODE : %s"%(json.dumps(action)))
+
+2018-10-25 10:53:26,245 - ERROR - <type 'exceptions.NameError'> - global name 'action' is not defined
+2018-10-25 10:56:54,510 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-25 10:56:54,512 - INFO - Repetier UI started.
+2018-10-25 10:57:16,633 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-25 11:03:06,929 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-25 11:03:22,778 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-25 11:50:46,898 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-25 11:50:52,395 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-25 11:51:35,620 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
