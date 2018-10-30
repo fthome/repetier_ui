@@ -5,6 +5,8 @@ import json
 import RPi.GPIO as GPIO
 import logging
 import time
+import requests
+
 
 # NOTES : il y aurait surement à simplifier la gestion du débounce!
 #TODO : gestion des appuis longs
@@ -18,34 +20,45 @@ class repetier_api(object):
 				- host		hostname or IP (default : localhost)
 				- port		port (default : 3344
 		'''
-		self.url = "ws://%s:%s/socket/"%(host, port)
+		self.ws_url = "ws://%s:%s/socket/"%(host, port)
 		self.header = {'x-api-key': api_key}
+		self.api_key = api_key
 		#TODO : test connection
+		self.api_url = "http://%s:%s/printer/api/" % (host, port)
+		"http://localhost:3344/printer/api/<slug>?a=<websocket command>&data=<json object properly url-escaped>&apikey=<API key>>"
 		
 	def send_gcode(self, printer, gcode):
 		'''Send a gcode to a printer
 		'''
-		datas = {'action': 'send', 'data': {'cmd': gcode},'printer':printer}
-		self.send(datas)
+		datas = {'a': 'send', 'data': {'cmd': gcode}}
+		self.send(printer, datas)
 		logging.debug("GCODE : %s"%(json.dumps(datas)))
 	
 	def send_action(self, printer, action):
 		'''Send a action to the printer (ex : action="continueJob")
 		'''
-		datas = {'action': action, 'data': {},'printer':printer}
-		self.send(datas)
+		datas = {'a': action, 'data': {}}
+		self.send(printer , datas)
 		logging.debug("ACTION : %s"%(json.dumps(datas)))
 	
-	def send(self, datas):
-		'''Send websockets
+	def ws_send(self, datas):
+		'''Send via websockets (depreciate)
 		'''
 		try:
-			ws = create_connection(self.url, header=self.header)
+			ws = create_connection(self.ws_url, header=self.header)
 			ws.send(json.dumps(datas))
 		except Exception as e:
 			logging.error("WebsocketError: %s"%(err.message))
+		finally:
+			ws.close	
 			
-		ws.close
+	def send(self, printer, action, datas):
+		'''Send then command by api
+		'''
+		url = self.url + printer 
+		#datas['apikey']=self.api_key
+		r = request.post(url, data = datas, headers=self.header)
+		logging.info("HTTP response : %s"%(r.text))
 		
 		
 class repetier_printer(object):
