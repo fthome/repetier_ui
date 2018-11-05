@@ -1,6 +1,5 @@
 # -*-coding:Utf-8 -*
 
-from websocket import create_connection
 import json
 import RPi.GPIO as GPIO
 import logging
@@ -18,19 +17,15 @@ class repetier_api(object):
 	def __init__(self, host = 'localhost', port = '3344', api_key = None):
 		'''Initialisation :
 				- host		hostname or IP (default : localhost)
-				- port		port (default : 3344
+				- port		port (default : 3344)
 		'''
-		self.ws_url = "ws://%s:%s/socket/"%(host, port)
-		self.header = {'x-api-key': api_key}
 		self.api_key = api_key
-		#TODO : test connection
 		self.api_url = "http://%s:%s/printer/api/" % (host, port)
-		"http://localhost:3344/printer/api/<slug>?a=<websocket command>&data=<json object properly url-escaped>&apikey=<API key>>"
 		
 	def send_gcode(self, printer, gcode):
 		'''Send a gcode to a printer
 		'''
-		datas = {'a': 'send', 'data': {'cmd': gcode}}
+		datas = {'a': 'send', 'data': json.dumps({'cmd': gcode})}
 		self.send(printer, datas)
 		logging.debug("GCODE : %s"%(json.dumps(datas)))
 	
@@ -40,25 +35,16 @@ class repetier_api(object):
 		datas = {'a': action, 'data': {}}
 		self.send(printer , datas)
 		logging.debug("ACTION : %s"%(json.dumps(datas)))
-	
-	def ws_send(self, datas):
-		'''Send via websockets (depreciate)
-		'''
-		try:
-			ws = create_connection(self.ws_url, header=self.header)
-			ws.send(json.dumps(datas))
-		except Exception as e:
-			logging.error("WebsocketError: %s"%(err.message))
-		finally:
-			ws.close	
-			
-	def send(self, printer, action, datas):
+		
+	def send(self, printer, datas):
 		'''Send then command by api
 		'''
-		url = self.url + printer 
-		#datas['apikey']=self.api_key
-		r = request.post(url, data = datas, headers=self.header)
-		logging.info("HTTP response : %s"%(r.text))
+		url = self.api_url + printer 
+		datas['apikey']=self.api_key
+		try:
+			r = requests.post(url, data = datas)
+		except requests.exceptions.RequestException as err:
+			logging.error("WebsocketError: %s"%(err.message))
 		
 		
 class repetier_printer(object):

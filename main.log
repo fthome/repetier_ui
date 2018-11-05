@@ -659,3 +659,23 @@
 2018-10-30 19:59:45,300 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
 2018-10-30 20:03:26,877 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
 2018-10-30 20:03:29,712 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-31 09:12:13,781 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-31 09:12:13,782 - INFO - Repetier UI started.
+2018-10-31 09:13:54,587 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-31 09:13:54,621 - INFO - HTTP response : {}
+2018-10-31 09:21:53,620 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2018-10-31 09:21:53,622 - INFO - Repetier UI started.
+2018-10-31 09:23:47,489 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-31 09:23:59,677 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-10-31 09:53:29,468 - INFO - GPIO26 FALLING => GCODE : pause.gcode send to HD.
+2018-10-31 09:53:37,098 - INFO - GPIO26 FALLING => GCODE : pause.gcode send to HD.
+2018-10-31 15:31:23,704 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-10-31 15:36:08,228 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-10-31 15:36:13,707 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-11-05 07:44:19,931 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-11-05 07:44:55,169 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2018-11-05 07:48:05,262 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2018-11-05 07:48:09,603 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2018-11-05 07:49:07,665 - INFO - GPIO10 FALLING => GCODE : goto_z_max.gcode send to HD.
+2018-11-05 07:49:09,584 - INFO - GPIO10 FALLING => GCODE : goto_z_max.gcode send to HD.
+2018-11-05 07:49:36,474 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
