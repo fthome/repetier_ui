@@ -2,15 +2,22 @@
 import sys
 import requests
 
-sys.path.insert(0,'/home/pi')
-from iftt_key import *
-#key = "xxxxx"
-url_base= "https://maker.ifttt.com/trigger/"
 
-def send_cmd(cmd):
+class ifttt(object):
+    '''Classe pour actions IFTTT
+    '''
+    def __init__(self, key, url= "https://maker.ifttt.com/trigger/"):
+        self.url_base = url
+        self.key = key
+    def send_cmd(cmd):
+        '''Send the Cmd on IFTTT
+        '''
         print("Send " + cmd)
-        r=requests.post(url_base+cmd+"/with/key/"+key)
+        r=requests.post(self.url_base+cmd+"/with/key/"+self.key)
         print(r.text)
 
-send_cmd(sys.argv[1])
-
+if __name__ == "__main__":
+    sys.path.insert(0,'/home/pi')
+    from iftt_key import *
+    ifttt0 = ifttt(key)
+    ifttt0.send_cmd(sys.argv[1])
