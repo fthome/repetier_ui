@@ -91,7 +91,7 @@ class repetier_printer(object):
 	def is_online(self):
 		'''return True if the printer is online, False otherwise
 		'''
-		return self.props[u'online']==1
+		return self.props()[u'online']==1
 
 	def is_printing(self):
 		'''return True if the printer is printing (ie with job and not paused)
@@ -148,8 +148,8 @@ class repetier_ui(object):
 	def successive_action(self, pin):
 		'''Return a callback function for add_event_detect
 		'''
-		def callback():
-			self.actions[pin][self.current_action[pin]].execute()
+		def callback(channel):
+			self.actions[pin][self.current_action[pin]].execute(channel)
 			self.current_action[pin] = (self.current_action[pin] + 1) % len(self.actions[pin])
 		return callback
 
@@ -192,7 +192,7 @@ class repetier_action(object):
 			time.sleep(10)
 		if (not self.only_if_printing) or self.printer.is_printing():
 			if self.repetier_ui.not_bounce(channel):
-				self._execute()
+				self._execute(channel)
 
 
 class repetier_gcode_action(repetier_action):

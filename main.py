@@ -13,8 +13,10 @@ HD = repetier_printer (repetier_api(api_key='142a8eed-7d86-4bea-96bc-cfcf5b3ca74
 sys.path.insert(0,'/home/pi')
 import iftt_key
 ifttt0 = set_ifttt.ifttt(iftt_key.key)
+def wake_up():
+    ifttt0.send_cmd("HD_on")
 
-UI = repetier_ui(debug=False, wake_up = lambda x: iftt.send_cmd("HD_on")) #debug = True : pas d'envoie des gcode
+UI = repetier_ui(debug=False, wake_up = wake_up ) #debug = True : pas d'envoie des gcode
 UI.add_action(22,repetier_file_action("extract.gcode",HD))
 UI.add_action(27,repetier_file_action("extrude_100_vite.gcode",HD))
 UI.add_action(17,repetier_file_action("extrude_50.gcode",HD))

@@ -9,7 +9,7 @@ class ifttt(object):
     def __init__(self, key, url= "https://maker.ifttt.com/trigger/"):
         self.url_base = url
         self.key = key
-    def send_cmd(cmd):
+    def send_cmd(self, cmd):
         '''Send the Cmd on IFTTT
         '''
         print("Send " + cmd)
