@@ -82,12 +82,25 @@ class repetier_printer(object):
 		'''
 		self.repetier_api.send_action(self.name,action)
 
+	def props(self):
+		'''return a dict : the properties of the printer
+		'''
+		listPrinter = self.repetier_api.send_action(self.name,"listPrinter")#En fait, quelque soit l'imprimante spécifiée, toutes les imprimantes sont retournées
+		return [x for x in listPrinter if x[u'slug']==self.name][0]
+
 	def is_online(self):
 		'''return True if the printer is online, False otherwise
 		'''
-		listPrinter = self.repetier_api.send_action(self.name,"listPrinter")
-		return listPrinter[0][u'online']==1
+		return self.props[u'online']==1
 
+	def is_printing(self):
+		'''return True if the printer is printing (ie with job and not paused)
+		'''
+		try:
+			props = self.props()
+			return props[u'online']==1 and props[u'active'] and props[u'job']!=u'none' and not props[u'paused']
+		except:
+			return False
 
 class repetier_ui(object):
 	''' Un raspberry pi avec des boutons qui lancent des actions sur le serveur repetier
@@ -135,8 +148,9 @@ class repetier_ui(object):
 	def successive_action(self, pin):
 		'''Return a callback function for add_event_detect
 		'''
-		callback = self.actions[pin][self.current_action[pin]].execute
-		self.current_action[pin] = (self.current_action[pin] + 1) % len(self.actions[pin])
+		def callback():
+			self.actions[pin][self.current_action[pin]].execute()
+			self.current_action[pin] = (self.current_action[pin] + 1) % len(self.actions[pin])
 		return callback
 
 	def close(self):
@@ -158,84 +172,82 @@ class repetier_ui(object):
 class repetier_action(object):
 	'''Une action à réaliser sur une imprimante
 	'''
-	def __init__(self, printer, debug = False):
+	def __init__(self, printer, debug = False, only_if_printing = False):
 		self.printer = printer
 		self.debug = debug
+		self.only_if_printing = only_if_printing
 
 	def set_debug_mode(self, debug):
 		''' Set debug mode on/off (debug = no gcoden sent)
 		'''
 		self.debug = debug
 
-	def wake_up(self):
-		''' If the printer is offligne, wake up it
+	def execute(self, channel):
+		''' Execute the action.
+		If the printer is not online, wake up it.
+		If only_if_printing == True, execute the action only if the printer is printing.
 		'''
 		if not self.printer.is_online():
 			self.repetier_ui.wake_up()
 			time.sleep(10)
+		if (not self.only_if_printing) or self.printer.is_printing():
+			if self.repetier_ui.not_bounce(channel):
+				self._execute()
 
 
 class repetier_gcode_action(repetier_action):
 	'''Une action à base string (=gcode)
 	'''
-	def __init__(self, gcode, printer, debug = False):
+	def __init__(self, gcode, printer, debug = False, only_if_printing = None):
 		'''Initialisation
 			gcode	:		string of gcode ex : "M300 S1000"
 			printer	:		a repetier_printer object
 		'''
 		self.gcode = gcode
-		repetier_action.__init__(self, printer, debug)
+		repetier_action.__init__(self, printer, debug, only_if_printing)
 
-	def execute(self, channel):
+	def _execute(self, channel):
 		'''Execute the gcode on the printer
 		'''
-		self.wake_up()
-		if self.repetier_ui.not_bounce(channel):
-			logging.info("GPIO%s FALLING => GCODE : %s send to %s."%(channel, self.gcode, self.printer.name))
-			if not self.debug:
-				self.printer.send_gcode(self.gcode)
+		logging.info("GPIO%s FALLING => GCODE : %s send to %s."%(channel, self.gcode, self.printer.name))
+		if not self.debug:
+			self.printer.send_gcode(self.gcode)
 
 class repetier_file_action(repetier_action):
 	'''Une action à base de fichier contenant du gcode
 	'''
-	def __init__(self, filename, printer, debug = False):
+	def __init__(self, filename, printer, debug = False, only_if_printing = None):
 		'''Initialisation
 			file_name	:		name of the file with gcode
 			printer		:		a repetier_printer object
 		'''
 		self.filename = filename
-		repetier_action.__init__(self, printer, debug)
+		repetier_action.__init__(self, printer, debug, only_if_printing)
 
-	def execute(self, channel):
+	def _execute(self, channel):
 		'''Execute the gcode on the printer
 		'''
-		self.wake_up()
-		if self.repetier_ui.not_bounce(channel):
-			logging.info("GPIO%s FALLING => GCODE : %s send to %s."%(channel, self.filename, self.printer.name))
-			if not self.debug:
-				self.printer.send_gcode_file(self.filename)
+		logging.info("GPIO%s FALLING => GCODE : %s send to %s."%(channel, self.filename, self.printer.name))
+		if not self.debug:
+			self.printer.send_gcode_file(self.filename)
 
 class repetier_action_action(repetier_action):
 	'''Une action simple (ex : "continueJob")
 	'''
-	def __init__(self, action, printer, debug=False):
+	def __init__(self, action, printer, debug=False, only_if_printing = None):
 		'''Initialisation
 			action		:		action (string)
 			printer		:		a repetier_printer object
 		'''
 		self.action = action
-		repetier_action.__init__(self, printer, debug)
+		repetier_action.__init__(self, printer, debug, only_if_printing)
 
-	def execute(self, channel):
+	def _execute(self, channel):
 		'''Execute the action on the printer
 		'''
-		self.wake_up()
-		if self.repetier_ui.not_bounce(channel):
-			logging.info("GPIO%s FALLING => ACTION : %s send to %s."%(channel, self.action, self.printer.name))
-			if not self.debug:
-				self.printer.send_action(self.action)
-
-
+		logging.info("GPIO%s FALLING => ACTION : %s send to %s."%(channel, self.action, self.printer.name))
+		if not self.debug:
+			self.printer.send_action(self.action)
 
 #EXAMPLE
 if __name__=='__main__':
