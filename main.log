@@ -995,3 +995,21 @@
 2019-01-28 14:41:36,161 - INFO - Repetier UI closed.
 2019-01-28 14:41:47,399 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
 2019-01-28 14:41:47,401 - INFO - Repetier UI started.
+2019-01-28 19:44:53,254 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2019-01-28 19:44:53,255 - INFO - Repetier UI started.
+2019-01-28 19:57:54,620 - INFO - Repetier UI closed.
+2019-01-28 19:57:55,823 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2019-01-28 19:57:55,825 - INFO - Repetier UI started.
+2019-01-28 19:59:49,204 - INFO - Repetier UI closed.
+2019-01-28 19:59:51,371 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2019-01-28 19:59:51,373 - INFO - Repetier UI started.
+2019-01-28 20:00:28,994 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 199, in execute
+    loging.debug("Oups, false event on GPIO%s."%channel)
+
+2019-01-28 20:00:28,996 - ERROR - <type 'exceptions.NameError'> - global name 'loging' is not defined
+2019-01-28 20:00:51,439 - INFO - Repetier UI closed.
+2019-01-28 20:00:52,501 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2019-01-28 20:00:52,503 - INFO - Repetier UI started.
+2019-01-28 20:01:09,565 - INFO - Repetier UI closed.
+2019-01-28 20:01:21,471 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2019-01-28 20:01:21,473 - INFO - Repetier UI started.

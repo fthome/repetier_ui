@@ -187,12 +187,16 @@ class repetier_action(object):
 		If the printer is not online, wake up it.
 		If only_if_printing == True, execute the action only if the printer is printing.
 		'''
-		if not self.printer.is_online():
-			self.repetier_ui.wake_up()
-			time.sleep(10)
-		if (not self.only_if_printing) or self.printer.is_printing():
-			if self.repetier_ui.not_bounce(channel):
+		if self.repetier_ui.not_bounce(channel):
+			logging.info("GPIO%s FALLING."%channel)
+			if not self.printer.is_online():
+				logging.info("Wake up the printer.")
+				self.repetier_ui.wake_up()
+				time.sleep(10)
+			if (not self.only_if_printing) or self.printer.is_printing():
 				self._execute(channel)
+		else:
+			logging.debug("Oups, false event on GPIO%s."%channel)
 
 
 class repetier_gcode_action(repetier_action):
