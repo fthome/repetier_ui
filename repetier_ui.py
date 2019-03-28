@@ -85,8 +85,14 @@ class repetier_printer(object):
 	def props(self):
 		'''return a dict : the properties of the printer
 		'''
+		props = {}
 		listPrinter = self.repetier_api.send_action(self.name,"listPrinter")#En fait, quelque soit l'imprimante spécifiée, toutes les imprimantes sont retournées
-		return [x for x in listPrinter if x[u'slug']==self.name][0]
+		listPrinter = [x for x in listPrinter if x[u'slug']==self.name][0]
+		stateList = self.repetier_api.send_action(self.name,"stateList")
+		stateList = stateList[self.name]
+		props.update(listPrinter)
+		props.update(stateList)
+		return props
 
 	def is_online(self):
 		'''return True if the printer is online, False otherwise
@@ -101,6 +107,12 @@ class repetier_printer(object):
 			return props[u'online']==1 and props[u'active'] and props[u'job']!=u'none' and not props[u'paused']
 		except:
 			return False
+
+	def has_axis(self):
+		'''return True is the printer has all axis (X,Y,Z) "homed"
+		'''
+		return self.props[u'hasXHome'] and HD.props()[u'hasYHome'] and HD.props()[u'hasZHome']
+
 
 class repetier_ui(object):
 	''' Un raspberry pi avec des boutons qui lancent des actions sur le serveur repetier
@@ -172,10 +184,11 @@ class repetier_ui(object):
 class repetier_action(object):
 	'''Une action à réaliser sur une imprimante
 	'''
-	def __init__(self, printer, debug = False, only_if_printing = False):
+	def __init__(self, printer, debug = False, only_if_printing = False, only_if_has_axis = False):
 		self.printer = printer
 		self.debug = debug
 		self.only_if_printing = only_if_printing
+		self.only_if_has_axis = only_if_has_axis
 
 	def set_debug_mode(self, debug):
 		''' Set debug mode on/off (debug = no gcoden sent)
@@ -193,7 +206,7 @@ class repetier_action(object):
 				logging.info("Wake up the printer.")
 				self.repetier_ui.wake_up()
 				time.sleep(10)
-			if (not self.only_if_printing) or self.printer.is_printing():
+			if ((not self.only_if_printing) or self.printer.is_printing()) and ((not self.only_if_has_axis) or self.has_axis()):
 				self._execute(channel)
 		else:
 			logging.debug("Oups, false event on GPIO%s."%channel)
@@ -202,13 +215,13 @@ class repetier_action(object):
 class repetier_gcode_action(repetier_action):
 	'''Une action à base string (=gcode)
 	'''
-	def __init__(self, gcode, printer, debug = False, only_if_printing = None):
+	def __init__(self, gcode, printer, debug = False, only_if_printing = None, only_if_has_axis = False):
 		'''Initialisation
 			gcode	:		string of gcode ex : "M300 S1000"
 			printer	:		a repetier_printer object
 		'''
 		self.gcode = gcode
-		repetier_action.__init__(self, printer, debug, only_if_printing)
+		repetier_action.__init__(self, printer, debug, only_if_printing,only_if_has_axis)
 
 	def _execute(self, channel):
 		'''Execute the gcode on the printer
@@ -220,13 +233,13 @@ class repetier_gcode_action(repetier_action):
 class repetier_file_action(repetier_action):
 	'''Une action à base de fichier contenant du gcode
 	'''
-	def __init__(self, filename, printer, debug = False, only_if_printing = None):
+	def __init__(self, filename, printer, debug = False, only_if_printing = None, only_if_has_axis = False):
 		'''Initialisation
 			file_name	:		name of the file with gcode
 			printer		:		a repetier_printer object
 		'''
 		self.filename = filename
-		repetier_action.__init__(self, printer, debug, only_if_printing)
+		repetier_action.__init__(self, printer, debug, only_if_printing, only_if_has_axis)
 
 	def _execute(self, channel):
 		'''Execute the gcode on the printer
@@ -238,13 +251,13 @@ class repetier_file_action(repetier_action):
 class repetier_action_action(repetier_action):
 	'''Une action simple (ex : "continueJob")
 	'''
-	def __init__(self, action, printer, debug=False, only_if_printing = None):
+	def __init__(self, action, printer, debug=False, only_if_printing = None, only_if_has_axis = False):
 		'''Initialisation
 			action		:		action (string)
 			printer		:		a repetier_printer object
 		'''
 		self.action = action
-		repetier_action.__init__(self, printer, debug, only_if_printing)
+		repetier_action.__init__(self, printer, debug, only_if_printing, only_if_has_axis)
 
 	def _execute(self, channel):
 		'''Execute the action on the printer
