@@ -1558,3 +1558,66 @@
 2019-03-28 10:53:20,627 - INFO - GPIO19 FALLING => GCODE : stop_all.gcode send to HD.
 2019-03-28 11:27:56,726 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
 2019-03-28 11:27:56,728 - INFO - Repetier UI started.
+2019-03-28 11:28:58,719 - INFO - GPIO22 FALLING.
+2019-03-28 11:28:58,779 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2019-03-28 11:39:11,037 - INFO - GPIO18 FALLING.
+2019-03-28 11:39:15,647 - INFO - GPIO10 FALLING.
+2019-03-28 11:39:15,700 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 209, in execute
+    if ((not self.only_if_printing) or self.printer.is_printing()) and ((not self.only_if_has_axis) or self.has_axis()):
+
+2019-03-28 11:39:15,702 - ERROR - <type 'exceptions.AttributeError'> - 'repetier_file_action' object has no attribute 'has_axis'
+2019-03-28 11:39:20,832 - INFO - GPIO10 FALLING.
+2019-03-28 11:39:20,882 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 209, in execute
+    if ((not self.only_if_printing) or self.printer.is_printing()) and ((not self.only_if_has_axis) or self.has_axis()):
+
+2019-03-28 11:39:20,883 - ERROR - <type 'exceptions.AttributeError'> - 'repetier_file_action' object has no attribute 'has_axis'
+2019-03-28 11:39:36,443 - INFO - GPIO10 FALLING.
+2019-03-28 11:39:36,492 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 209, in execute
+    if ((not self.only_if_printing) or self.printer.is_printing()) and ((not self.only_if_has_axis) or self.has_axis()):
+
+2019-03-28 11:39:36,494 - ERROR - <type 'exceptions.AttributeError'> - 'repetier_file_action' object has no attribute 'has_axis'
+2019-03-28 11:39:37,698 - INFO - GPIO10 FALLING.
+2019-03-28 11:39:37,758 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 209, in execute
+    if ((not self.only_if_printing) or self.printer.is_printing()) and ((not self.only_if_has_axis) or self.has_axis()):
+
+2019-03-28 11:39:37,763 - ERROR - <type 'exceptions.AttributeError'> - 'repetier_file_action' object has no attribute 'has_axis'
+2019-03-28 11:41:02,248 - INFO - GPIO27 FALLING.
+2019-03-28 11:41:02,306 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2019-03-28 11:41:05,703 - INFO - GPIO17 FALLING.
+2019-03-28 11:41:05,756 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2019-03-28 11:41:08,577 - INFO - GPIO17 FALLING.
+2019-03-28 11:41:08,645 - INFO - GPIO17 FALLING => GCODE : extrude_50.gcode send to HD.
+2019-03-28 17:52:43,643 - INFO - GPIO18 FALLING.
+2019-03-28 17:52:43,745 - INFO - GPIO18 FALLING => GCODE : pause.gcode send to HD.
+2019-03-28 19:13:38,052 - INFO - GPIO18 FALLING.
+2019-03-28 19:14:35,399 - INFO - GPIO22 FALLING.
+2019-03-28 19:14:35,449 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.
+2019-03-28 19:15:13,562 - INFO - GPIO27 FALLING.
+2019-03-28 19:15:13,619 - INFO - GPIO27 FALLING => GCODE : extrude_100_vite.gcode send to HD.
+2019-03-28 19:15:49,699 - INFO - GPIO26 FALLING.
+2019-03-28 19:15:49,754 - INFO - GPIO26 FALLING => GCODE : pause.gcode send to HD.
+2019-03-28 19:15:51,234 - INFO - GPIO26 FALLING.
+2019-03-28 19:15:51,290 - INFO - GPIO26 FALLING => ACTION : continueJob send to HD.
+2019-03-29 15:21:59,037 - INFO - GPIO22 FALLING.
+2019-03-29 15:21:59,090 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 205, in execute
+    if not self.printer.is_online():
+  File "/home/pi/repetier_ui/repetier_ui.py", line 100, in is_online
+    return self.props()[u'online']==1
+  File "/home/pi/repetier_ui/repetier_ui.py", line 92, in props
+    stateList = stateList[self.name]
+
+2019-03-29 15:21:59,092 - ERROR - <type 'exceptions.KeyError'> - 'HD'
+2019-03-29 15:22:37,795 - INFO - GPIO22 FALLING.
+2019-03-29 15:22:37,850 - ERROR -   File "/home/pi/repetier_ui/repetier_ui.py", line 205, in execute
+    if not self.printer.is_online():
+  File "/home/pi/repetier_ui/repetier_ui.py", line 100, in is_online
+    return self.props()[u'online']==1
+  File "/home/pi/repetier_ui/repetier_ui.py", line 92, in props
+    stateList = stateList[self.name]
+
+2019-03-29 15:22:37,851 - ERROR - <type 'exceptions.KeyError'> - 'HD'
+2019-03-29 15:29:42,246 - INFO - my_logging logger is started. Console : DEBUG. File (main.log) : INFO
+2019-03-29 15:29:42,247 - INFO - Repetier UI started.
+2019-03-29 15:29:53,246 - INFO - GPIO22 FALLING.
+2019-03-29 15:29:53,303 - INFO - Wake up the printer.
+2019-03-29 15:30:04,237 - INFO - GPIO22 FALLING => GCODE : extract.gcode send to HD.

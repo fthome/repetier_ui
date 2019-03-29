@@ -88,16 +88,22 @@ class repetier_printer(object):
 		props = {}
 		listPrinter = self.repetier_api.send_action(self.name,"listPrinter")#En fait, quelque soit l'imprimante spécifiée, toutes les imprimantes sont retournées
 		listPrinter = [x for x in listPrinter if x[u'slug']==self.name][0]
-		stateList = self.repetier_api.send_action(self.name,"stateList")
-		stateList = stateList[self.name]
 		props.update(listPrinter)
-		props.update(stateList)
+		stateList = self.repetier_api.send_action(self.name,"stateList")
+		try:
+			stateList = stateList[self.name]
+			props.update(stateList)
+		except KeyError:
+			pass
 		return props
 
 	def is_online(self):
 		'''return True if the printer is online, False otherwise
 		'''
-		return self.props()[u'online']==1
+		try:
+			return self.props()[u'online']==1
+		except KeyError:
+			return False
 
 	def is_printing(self):
 		'''return True if the printer is printing (ie with job and not paused)
@@ -111,7 +117,10 @@ class repetier_printer(object):
 	def has_axis(self):
 		'''return True is the printer has all axis (X,Y,Z) "homed"
 		'''
-		return self.props[u'hasXHome'] and HD.props()[u'hasYHome'] and HD.props()[u'hasZHome']
+		try:
+			return self.props[u'hasXHome'] and HD.props()[u'hasYHome'] and HD.props()[u'hasZHome']
+		except KeyError:
+			return False
 
 
 class repetier_ui(object):
